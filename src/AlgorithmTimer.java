@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class AlgorithmTimer {
     static List<File> fileList = new LinkedList<File>(Arrays.asList(new File("Test_Data").listFiles()));
     
-        public static void timeAlgorithm(SortingAlgorithm sortingAlgorithm) throws IOException {
+        public void timeAlgorithm(SortingAlgorithm sortingAlgorithm) throws IOException {
 
             String[] averageTimes = new String[7];
             for (int i = 0; i < 7; i++) {
@@ -85,13 +85,28 @@ public class AlgorithmTimer {
         ShellSort shellSort = new ShellSort();
         ThreeWayQuickSort threeWayQuickSort = new ThreeWayQuickSort();
 
-        timeAlgorithm(bottomUpMergeSort);
-        timeAlgorithm(insertionSort);
-        timeAlgorithm(mergeSort);
-        timeAlgorithm(quickSort);
-        timeAlgorithm(randQuickSort);
-        timeAlgorithm(selectionSort);
-        timeAlgorithm(shellSort);
-        timeAlgorithm(threeWayQuickSort);
+        AlgorithmTimer timer = new AlgorithmTimer(); 
+        timer.timeAlgorithm(bottomUpMergeSort);
+
+        timer = new AlgorithmTimer();
+        timer.timeAlgorithm(insertionSort);
+
+        timer = new AlgorithmTimer();
+        timer.timeAlgorithm(mergeSort);
+
+        timer = new AlgorithmTimer(); 
+        timer.timeAlgorithm(quickSort);
+
+        timer = new AlgorithmTimer();
+        timer.timeAlgorithm(randQuickSort);
+
+        timer = new AlgorithmTimer();
+        timer.timeAlgorithm(selectionSort);
+
+        timer = new AlgorithmTimer();
+        timer.timeAlgorithm(shellSort);
+
+        timer = new AlgorithmTimer();
+        timer.timeAlgorithm(threeWayQuickSort);
     }
 }
