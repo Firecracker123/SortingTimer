@@ -12,6 +12,10 @@ import java.util.Scanner;
 public class AlgorithmTimer {
     static List<File> fileList = new LinkedList<File>(Arrays.asList(new File("Test_Data").listFiles()));
     
+        public AlgorithmTimer() {
+            fileList = new LinkedList<File>(Arrays.asList(new File("Test_Data").listFiles()));
+        }
+
         public void timeAlgorithm(SortingAlgorithm sortingAlgorithm) throws IOException {
 
             String[] averageTimes = new String[7];
